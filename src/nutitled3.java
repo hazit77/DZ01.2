@@ -38,7 +38,16 @@ public class nutitled3 {
         }
 
         System.out.println("Initial array: " + a[0] + ", "+ a[1]+ ", "+ a[2]+ ", " +  a[3]+ ", " + a[4]);
-        Arrays.sort(a);
+        for (int q = a.length - 1; q >=0; q--) {
+            for (int j = 0; j < q; j++){
+             if (a[j] > a[j + 1]){
+                 int y = a[j];
+                 a[j] = a[j + 1];
+                 a[j + 1] = y;
+             }
+            }
+        }
+            
         System.out.println("Sorted array: " + a[0] + ", "+ a[1]+ ", "+ a[2]+ ", " +  a[3]+ ", " + a[4]);
 
 
